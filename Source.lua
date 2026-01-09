@@ -12,7 +12,7 @@ local Urls = {
 
 for GameName, Url in pairs(Urls) do
     for Index, Value in pairs(HttpService:JSONDecode(game:HttpGet(Url))) do
-        ItemList[GameName][string.lower(Value.pets)] = Value
+        ItemList[GameName][Value.pets] = Value
     end
 end
 
